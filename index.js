@@ -1,7 +1,7 @@
 const seneca = require('seneca')()
 const port = process.env.PORT || 8081
 const mapped_port = process.env.MAPPED_PORT || 8081 // Clever Cloud -> 80
-const host = process.env.HOST || 'localhost' // domain name
+const host = process.env.HOST || `${process.env.APP_ID}.cleverapps.io` || 'localhost' // domain name
 
 const rediscli = require("redis").createClient({
   url:process.env.REDIS_URL
