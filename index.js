@@ -3,6 +3,11 @@ const port = process.env.PORT || 8081
 const mapped_port = process.env.MAPPED_PORT || 8081 // Clever Cloud -> 80
 const host = process.env.HOST || `${process.env.APP_ID}.cleverapps.io` || 'localhost' // domain name
 
+/*
+TODO:
+retry with `${process.env.APP_ID}.cleverapps.io`
+*/
+
 const rediscli = require("redis").createClient({
   url:process.env.REDIS_URL
 });
@@ -34,9 +39,9 @@ seneca
   })
 
 rediscli.set(service_id, JSON.stringify({
-  host: host, port: mapped_port
+  host: host, port: mapped_port, services:["yo","sum","product"]
 }));
 
 console.info(`🌍 service ${service_id} is listening on ${host}:${mapped_port}`)
-
+console.log(`🤖 you can call: http://${host}/act?role=hello&cmd=yo`)
 // tests on CC: http://yoservicedemo.cleverapps.io/act?role=hello&cmd=yo
