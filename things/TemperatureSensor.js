@@ -18,7 +18,10 @@ class TemperatureSensor extends Thing {
       id: this.id,
       value: this.temperature.value,
       unit: this.temperature.unit,
-      delay: this.delay
+      delay: this.delay,
+      min: this.temperature.min,
+      max: this.temperature.max,
+      kind: "temperature"
     }
   }
 }
