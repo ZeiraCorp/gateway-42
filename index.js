@@ -9,16 +9,6 @@ const rediscli = require("redis").createClient({
 
 const service_id = process.env.SERVICE_ID || "gateway-42-service"
 
-console.log("=== CC Special environment variables ===")
-console.log("APP_ID", process.env.APP_ID)
-console.log("INSTANCE_ID", process.env.INSTANCE_ID)
-console.log("INSTANCE_TYPE", process.env.INSTANCE_TYPE)
-console.log("COMMIT_ID", process.env.COMMIT_ID)
-console.log("APP_HOME", process.env.APP_HOME)
-console.log("INSTANCE_NUMBER", process.env.INSTANCE_NUMBER)
-console.log("IGNORE_FROM_BUILDCACHE", process.env.IGNORE_FROM_BUILDCACHE)
-console.log("========================================")
-
 function yo(options) {
   this.add({role: "hello", cmd: "yo"}, (message, reply) => {
     reply(null, {answer: "yo 🌍❗️"})
