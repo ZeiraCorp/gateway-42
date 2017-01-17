@@ -121,6 +121,8 @@ let iam = () => {
         , INSTANCE_TYPE: process.env.INSTANCE_TYPE || "INSTANCE_TYPE"
         , COMMIT_ID: process.env.COMMIT_ID || "COMMIT_ID"
         , INSTANCE_NUMBER: process.env.INSTANCE_NUMBER || "INSTANCE_NUMBER"
+        , kind:"🍏🍎🍐🍊🍋🍓🍒🍑"
+
       }
   }));
 }
