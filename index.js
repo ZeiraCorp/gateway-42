@@ -104,14 +104,23 @@ seneca
 
 let iam = () => {
   rediscli.set(service_id, JSON.stringify({
-    host: host, port: mapped_port, services:[
-        "hello:yo"
-      , "sensors:all"
-      , "sensors:temperature"
-      , "sensors:humidity"
-      , "one-sensor:temperature"
-      , "one-sensor:humidity"
-    ]
+      host: host
+    , port: mapped_port
+    , services:[
+          "hello:yo"
+        , "sensors:all"
+        , "sensors:temperature"
+        , "sensors:humidity"
+        , "one-sensor:temperature"
+        , "one-sensor:humidity"
+      ]
+    , instanceInformations: {
+          APP_ID: process.env.APP_ID || "APP_ID"
+        , INSTANCE_ID: process.env.INSTANCE_ID || "INSTANCE_ID"
+        , INSTANCE_TYPE: process.env.INSTANCE_TYPE || "INSTANCE_TYPE"
+        , COMMIT_ID: process.env.COMMIT_ID || "😮 COMMIT_ID"
+        , INSTANCE_NUMBER: process.env.INSTANCE_NUMBER || "INSTANCE_NUMBER"
+      }
   }));
 }
 
