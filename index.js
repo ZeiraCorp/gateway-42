@@ -10,6 +10,7 @@ const HumiditySensor = require('./things/HumiditySensor').HumiditySensor;
 
 
 // ============ SENSORS ============
+// rien
 let randomDelay =  () => {
   let getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
   return getRandomInt(1500, 4000);
