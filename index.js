@@ -118,7 +118,7 @@ let iam = () => {
           APP_ID: process.env.APP_ID || "APP_ID"
         , INSTANCE_ID: process.env.INSTANCE_ID || "INSTANCE_ID"
         , INSTANCE_TYPE: process.env.INSTANCE_TYPE || "INSTANCE_TYPE"
-        , COMMIT_ID: process.env.COMMIT_ID || "😮 COMMIT_ID"
+        , COMMIT_ID: process.env.COMMIT_ID || "COMMIT_ID"
         , INSTANCE_NUMBER: process.env.INSTANCE_NUMBER || "INSTANCE_NUMBER"
       }
   }));
