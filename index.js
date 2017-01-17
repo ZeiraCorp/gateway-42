@@ -1,4 +1,4 @@
-const seneca = require('seneca')()
+const seneca = require('seneca')({timeout: 1000})
 const port = process.env.PORT || 8081
 const mapped_port = process.env.MAPPED_PORT || 8081 // Clever Cloud -> 80
 const host = process.env.HOST || 'localhost' // domain name

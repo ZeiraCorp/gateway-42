@@ -19,7 +19,8 @@ class HumiditySensor extends Thing {
       unit: this.humidity.unit,
       delay: this.delay,
       min: this.humidity.min,
-      max: this.humidity.max
+      max: this.humidity.max,
+      kind: "humidity"
     }
   }
 }
