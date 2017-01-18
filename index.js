@@ -40,7 +40,7 @@ const rediscli = require("redis").createClient({
 });
 
 // ⚠️⚠️⚠️ the id has to start with `gateway-`
-const service_id = process.env.SERVICE_ID || "gateway-42-service-local-dev"
+const service_id = process.env.YOYO || "gateway-42-service-local-dev"
 
 // used to check if the gateway is ok
 function yo(options) {
